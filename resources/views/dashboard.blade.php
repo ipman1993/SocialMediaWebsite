@@ -31,7 +31,7 @@
                         <a href="#" class="like">{{ Auth::user()->likes()->where('post_id', $post->id)->first() ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 0 ? 'You don\'t like this post' : 'Dislike' : 'Dislike'}}</a>
                         @if(Auth::user() == $post->user)
                             |
-                            <a href="#" class="post-edit" data-postid="{{$post->id}}">Edit</a> |
+                            <a href="#" class="post-edit" data-postid="{{$post->id}}">تعديل</a> |
                             <a href="{{route('post.delete', ['post_id' => $post->id])}}">Delete</a>
                         @endif
                     </div>
